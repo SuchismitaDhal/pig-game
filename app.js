@@ -45,6 +45,7 @@ if(gamePlaying)
 }  
 });
 
+/////////////////// Hold functionality ///////////////////////////
 document.querySelector('.btn-hold').addEventListener('click', function()
 {
 if(gamePlaying)
@@ -88,7 +89,10 @@ function nextPlayer(player)
     return (player ? 0 : 1);
 }
 
-//init is a callback function as it is defined outside the event listner
+/////////////////// New game functionality ///////////////////////////
+/*************************************************************************
+* init is a callback function as it is defined outside the event listner
+**************************************************************************/
 document.querySelector('.btn-new').addEventListener('click', init);
 
 function init() 
@@ -115,6 +119,6 @@ function init()
     document.querySelector('.player-0-panel').classList.remove('active');
     document.querySelector('.player-1-panel').classList.remove('active');
     //we have to remove and then add active class to eliminate the chance of getting 
-    //two active class for the same panal
+    //two active class for the same panel
     document.querySelector('.player-0-panel').classList.add('active');
 }
